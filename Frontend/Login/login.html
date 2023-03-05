@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./login.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <a href="../Homepage/home.html" class="logo"><img src="../img/logo.png"alt="logo" width="140px" height="100px"></a>
+    <section class="search">
+      <input id="search-box" type="text" placeholder="Search..." onkeyup="search_product()" name="search">
+      <ion-icon name="search"></ion-icon>
+    </section>
+
+    <section id="#nav-links">
+      <ul class="nav">
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../Sign up page/signup.html">Sign Up</a></li>
+        <li><a href="../Login/login.html">Login</a></li>
+        <li class="cart"><a href="cart.html">
+            <ion-icon name="cart"></ion-icon>Cart <span>0</span>
+          </a></li>
+      </ul>
+    </section>
+  </header>
+
+
+
+  <section class="container">
+    <form class="login" action="login.html" method="POST">
+      <h1>Login</h1>
+      <section class="input">
+        <input type="text" name="" placeholder="Enter the email" id="username" class="in" >
+        <label class="lab" for="text">Enter   Email</label>
+      </section>
+      <section class="input">
+        <input type="password" name="" placeholder="Enter password" id=password class="in">
+        <label for="text" class="lab">Enter Password</label>
+      </section>
+      <section class="input">
+        <input type="submit" name="" value="  Login  " onclick="validate()" class="button">
+      </section>
+    </form>
+    <section class="link">
+      <a href="../Sign up page/signup.html">Create a New Account</a>
+    </section>
+  </section>
+
+
+
+  <section class="footer">
+    <footer class="holder">
+      <section class="col">
+        <h3>Get to Know Us</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </section>
+
+      <section class="col">
+        <h3>Site Links</h3>
+        <ul>
+          <li><a href="../Dairy/dairy.html">Dairy</a></li>
+          <li><a href="../Fruits/fruit.html">Fruits</a></li>
+          <li><a href="../Snacks/snacks.html">Snacks</a></li>
+          <li><a href="../Beverages/beverages.html">Beverages</a></li>
+          <li><a href="../Vegetable/vegetables.html">Vegetables</a></li>
+          <li><a href="../Meat & Seafood/meat&seafood.html">Meat & Seafood</a></li>
+          <li><a href="../Soap & Detergent/soap&detergent.html">Soap & Detergents</a></li>
+        </ul>
+      </section>
+    </footer>
+  </section>
+  <script src="./login.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+
+</html>

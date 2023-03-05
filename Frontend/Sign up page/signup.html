@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp</title>
+  <link rel="stylesheet" href="../forms copy.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--HEADER-->
+  <header>
+    <a href="./home.html" class="logo"><img src="../img/logo.png"alt="logo" width="140px" height="100px"></a>
+ 
+
+    <section id="#nav-links">
+        <ul class="nav">
+            <li><a href="../home.html">Home</a></li>
+            <li><a href="../Sign up page/signup.html">Sign Up</a></li>
+            <li><a href="../Login/login.html">Login</a></li>
+            
+        </ul>
+    </section>
+</header>
+
+
+  <!--SIGNUP FORM-->
+  <section id="container">
+    <form class="signup" action="http://localhost:3000/signup" method="POST" target="_self">
+      <h1>Sign Up</h1>
+
+      <section class="input">
+        <input type="text" class="in" placeholder="Enter Your Name" name="name" minlength="4" required>
+        <label for="text" class="lab">Name</label>
+      </section>
+
+      <section class="input">
+        <input type="email" class="in" placeholder="Enter Email" name="email" required>
+        <label for="text" class="lab">Email</label>
+      </section>
+
+      <section class="input">
+        <input type="tel" class="in" placeholder="Enter Phone Number" name="number" required>
+        <label for="text" class="lab">Phone Number</label>
+      </section>
+
+      <section class="input">
+        <input type="password" class="in" placeholder="Enter Password" name="password" minlength="4" required>
+        <label for="text" class="lab">Enter Password</label>
+      </section>
+
+      <section class="input">
+        <input type="submit" value="Sign Up" class="button">    <a href="home.html"></a>
+      </section>
+      <section class="link">
+        <a href="./login.html">Already have an account?</a>
+      </section>
+    </form>
+
+    
+
+  </section>
+
+
+  <script>
+    document.querySelector('button')
+        .addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = document.querySelector('#email').value;
+            const name= document.querySelector('#name').value;
+            const password = document.querySelector('#password').value;
+            const number= document.querySelector('#number').value
+                 
+            fetch('http://localhost:3000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email,
+                    name,
+                    password,
+                    number,
+  
+                }),
+            })
+                .then((res) => {
+                    return res.json();
+                })
+                .then((data) => console.log(data));
+        });
+  </script>
+   
+
+  <!--FOOTER-->
+  <section class="footer">
+    <footer class="holder">
+        <section class="col">
+            <h3>Get to Know Us</h3>
+            <ul>
+              <li><a href="./about.html#about">About Us</a></li>
+              <li><a href="./about.html#contact">Contact</a></li>
+          </ul>
+        </section>
+
+        <section class="col">
+            <h3>Site Links</h3>
+            <ul>
+                <li><a href="./dairy.html">Dairy</a></li>
+                <li><a href="./fruit.html">Fruits</a></li>
+                <li><a href="./snacks.html">Snacks</a></li>
+                <li><a href="./beverages.html">Beverages</a></li>
+                <li><a href="./vegetables.html">Vegetables</a></li>
+                <li><a href="./meat&seafood.html">Meat & Seafood</a></li>
+                <li><a href="./soap&detergent.html">Soap & Detergents</a></li>
+            </ul>
+        </section>
+    </footer>
+</section>
+
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+
+
+</body>
+
+</html>

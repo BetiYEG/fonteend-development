@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <title>DolceCasa Liquid Hand Soap</title>
+    <link rel="stylesheet" href="../product.css">
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header>
+        <div class="logo">
+                <img src="../img/logo.png" alt="logo" width="120px" height="90px">
+        </div>
+
+
+        <nav>
+                <ul class="nav">
+                    <a href="../../Login/login.html">Login</a>
+                        <a href="../../Sign up page/signup.html">Signup</a>
+                                <a href="../home.html">Home</a>
+                </ul>
+        </nav>
+
+        </div>
+    </header>
+
+    <section class="wrap">
+        <aside class="sidebar">
+            <nav class="sb-nav">
+                <a href="../dairy.html" class="bar-item">Dairy</a>
+                <a href="../fruit.html" class="bar-item">Fruits</a>
+                <a href="../snacks.html" class="bar-item">Snacks</a>
+                <a href="../beverages.html" class="bar-item">Beverages</a>
+                <a href="../vegetables.html" class="bar-item">Vegetables</a>
+                <a href="../meat&seafood.html" class="bar-item">Meat & Seafood</a>
+                <a href="../soap&detergent.html" class="bar-item">Soap & Detergents</a>
+            </nav>
+        </aside>
+
+        <section class="content">
+
+            <section>
+                <img src="../img/hand soap.png" alt="DolceCasa Liquid Hand Soap" width="200px" height="200px">
+            </section>
+            <section class="details">
+                <section class="crumbs" aria-label="breadcrumbs">
+                    <a href="../home.html">Home</a>
+                    <span>/</span>
+                    <a href="../soap&detergent.html">Soaps & Detergents</a>
+                </section>
+                <section class="product-name">
+                    <h3>DolceCasa Liquid Hand Soap</h3>
+                </section>
+                <section class="price">
+                    <h3>100 Br</h3>
+                    <p>price per piece</p>
+                </section>
+                <section class="counter">
+                    <h5>Quantity: </h5>
+                    <span class="down" onclick="decreaseCount(event,this)">-</span>
+                    <input type="text" value="1">
+                    <span class="up" onclick="increaseCount(event,this)">+</span>
+                </section>
+                <div class="add-to-cart-button">
+                    <div class="form-ctrl">
+                        <button type="button">
+                            <span class="button-text">Add to Cart</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+
+
+    <section class="footer">
+        <footer class="holder">
+            <section class="col">
+                <h3>Get to Know Us</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </section>
+
+            <section class="col">
+                <h3>Site Links</h3>
+                <ul>
+                    <li><a href="../dairy.html">Dairy</a></li>
+                    <li><a href="../fruit.html">Fruits</a></li>
+                    <li><a href="../snacks.html">Snacks</a></li>
+                    <li><a href="../beverages.html">Beverages</a></li>
+                    <li><a href="../vegetables.html">Vegetables</a></li>
+                    <li><a href="../meat&seafood.html">Meat & Seafood</a></li>
+                    <li><a href="../soap&detergent.html">Soap & Detergents</a></li>
+                </ul>
+            </section>
+        </footer>
+    </section>
+
+    <script type="text/javascript">
+        function increaseCount(a, b) {
+            var input = b.previousElementSibling;
+            var value = parseInt(input.value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            input.value = value;
+        }
+        function decreaseCount(a, b) {
+            var input = b.nextElementSibling;
+            var value = parseInt(input.value, 10);
+            if (value > 1) {
+                value = isNaN(value) ? 0 : value;
+                value--;
+                input.value = value;
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+
+</body>
+
+</html>
